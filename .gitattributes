@@ -1,2 +1,50 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+#include <iostream>
+using namespace std;
+
+template <class T, class X>
+T getDimensions(T &number, X &number2);
+
+template <class T, class X>
+T calcArea(T val_1, X val_2);
+
+int main()
+{
+	int side1 = 0;
+	int side2 = 0;
+	float width = 0.0;
+	float length = 0.0;
+
+	cout << "Enter the integer dimensions of a rectangle:\n";
+	getDimensions(side1, side2);
+	
+
+	cout << "The area equals: " << calcArea(side1, side2) << "\n\n";
+
+	cout << "Enter the float dimensions of a rectangle:\n";
+	getDimensions(width, length);
+
+	cout << "The area equals: " << calcArea(width, length) << "\n\n";
+
+	system("pause");
+
+	return 0;
+}
+
+template <class T, class X>
+T calcArea(T val_1, X val_2)
+{
+	return val_1 * val_2;
+}
+
+template <class T, class X>
+T getDimensions(T &number, X &number2)
+{
+	cout << "Enter the first dimension: ";
+	cin >> number;
+	cout << "Enter the second dimension: ";
+	cin >> number2;
+
+	return number, number2;
+}
